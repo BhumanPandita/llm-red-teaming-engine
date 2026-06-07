@@ -1,8 +1,6 @@
 import type { Campaign, CampaignConfig } from "./types";
 
-const BASE =
-  process.env.NEXT_PUBLIC_API_URL ||
-  "https://llm-red-teaming-engine-production.up.railway.app";
+const BASE = "https://llm-red-teaming-engine-production.up.railway.app";
 
 export async function getCategories(): Promise<string[]> {
   const res = await fetch(`${BASE}/api/categories`, { cache: "no-store" });
@@ -17,7 +15,7 @@ export async function listCampaigns(): Promise<Campaign[]> {
 }
 
 export async function getCampaign(id: string): Promise<Campaign> {
-  const res = await fetch(`/api/campaigns/${id}`, { cache: "no-store" });
+  const res = await fetch(`${BASE}/api/campaigns/${id}`, { cache: "no-store" });
   if (!res.ok) throw new Error("Failed to load campaign");
   return res.json();
 }
