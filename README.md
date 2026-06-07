@@ -1,7 +1,7 @@
 # Adversarial RAG & LLM Red-Teaming Engine
 
 An automated security testing system that fires adversarial prompts at a RAG-backed LLM, scores every response with a hybrid heuristic + LLM judge, and produces a structured vulnerability report. The target is a simulated HR chatbot holding confidential executive salary data — the goal of each attack is to trick it into leaking that data.
-
+[📄 Project Overview PDF](project_overview.pdf)
 ```
 attacker.py  →  executor.py  →  target_rag.py
                                       ↓
