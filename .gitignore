@@ -1,0 +1,30 @@
+# Secrets
+.env
+
+# Runtime outputs
+rag_interactions.db
+vulnerability_report.csv
+reports/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+
+# Node / Next.js
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+
+# Claude Code internal
+CLAUDE.md
+
+# macOS
+.DS_Store
